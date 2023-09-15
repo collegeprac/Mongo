@@ -1,0 +1,154 @@
+use company
+switched to db company
+> db.Employee.insert([{"Employee ID":"11","First name":"Pratik","last name":"Ghule","email":"pratikghule"}])
+BulkWriteResult({
+	"writeErrors" : [ ],
+	"writeConcernErrors" : [ ],
+	"nInserted" : 1,
+	"nUpserted" : 0,
+	"nMatched" : 0,
+	"nModified" : 0,
+	"nRemoved" : 0,
+	"upserted" : [ ]
+})
+> db.Employee.update({"Employee ID":"11"},{$set:{"email":"pratikGhule@gmail.com",address:[{Street:"Sb road"},{city:"Pune"},{state:"maharashtra"},{Country:"Bharat"},{Pincode:"4111001"}]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+db.Employee.insert([{"Employee ID":"12","First name":"Sahil","last name":"Khengre","email":"Sahilkhengre@gmail.com",address:[{street:"laxmi road"},{city:"Pune"},{state:"Maharashtra"},{country:"Bharat"},{pincode:"400110"}]}])
+
+db.Employee.insert([{"Employee ID":"13","First name":"DURGESH","last name":"BAGUL","email":"durgeshbagul@gmail.com",address:[{street:"fox street"},{city:"Andheri"},{state:"Maharashtra"},{country:"Bharat"},{pincode:"400001"}]}])
+
+db.Employee.insert([{"Employee ID":"14","First name":"GANESH ","last name":"DHUMSE","email":"ganya123@gmail.com",address:[{street:"jwn road"},{city:"Nashik"},{state:"Maharashtra"},{country:"Bharat"},{pincode:"400111"}]}])
+
+db.Employee.insert([{"Employee ID":"15","First name":"Yash ","last name":"Jain","email":"jaiyash@gmail.com",address:[{street:"katepuram road"},{city:"Sangavi"},{state:"Maharashtra"},{country:"Bharat"},{pincode:"400111"}]}])
+
+
+
+
+
+                                               OUTPUT
+
+> db.getCollectionNames()
+[ "Employee" ]
+> db.Employee.find().pretty()
+{
+	"_id" : ObjectId("65000b71057264799829201c"),
+	"Employee ID" : "11",
+	"First name" : "Pratik",
+	"last name" : "Ghule",
+	"email" : "pratikGhule@gmail.com",
+	"address" : [
+		{
+			"Street" : "Sb road"
+		},
+		{
+			"city" : "Pune"
+		},
+		{
+			"state" : "maharashtra"
+		},
+		{
+			"Country" : "Bharat"
+		},
+		{
+			"Pincode" : "4111001"
+		}
+	]
+}
+{
+	"_id" : ObjectId("65000dfc057264799829201d"),
+	"Employee ID" : "12",
+	"First name" : "Sahil",
+	"last name" : "Khengre",
+	"email" : "Sahilkhengre@gmail.com",
+	"address" : [
+		{
+			"street" : "laxmi road"
+		},
+		{
+			"city" : "Pune"
+		},
+		{
+			"state" : "Maharashtra"
+		},
+		{
+			"country" : "Bharat"
+		},
+		{
+			"pincode" : "400110"
+		}
+	]
+}
+{
+	"_id" : ObjectId("65000e3d057264799829201e"),
+	"Employee ID" : "13",
+	"First name" : "DURGESH",
+	"last name" : "BAGUL",
+	"email" : "durgeshbagul@gmail.com",
+	"address" : [
+		{
+			"street" : "fox street"
+		},
+		{
+			"city" : "Andheri"
+		},
+		{
+			"state" : "Maharashtra"
+		},
+		{
+			"country" : "Bharat"
+		},
+		{
+			"pincode" : "400001"
+		}
+	]
+}
+{
+	"_id" : ObjectId("65000e70057264799829201f"),
+	"Employee ID" : "14",
+	"First name" : "GANESH ",
+	"last name" : "DHUMSE",
+	"email" : "ganya123@gmail.com",
+	"address" : [
+		{
+			"street" : "jwn road"
+		},
+		{
+			"city" : "Nashik"
+		},
+		{
+			"state" : "Maharashtra"
+		},
+		{
+			"country" : "Bharat"
+		},
+		{
+			"pincode" : "400111"
+		}
+	]
+}
+{
+	"_id" : ObjectId("65000e980572647998292020"),
+	"Employee ID" : "15",
+	"First name" : "Yash ",
+	"last name" : "Jain",
+	"email" : "jaiyash@gmail.com",
+	"address" : [
+		{
+			"street" : "katepuram road"
+		},
+		{
+			"city" : "Sangavi"
+		},
+		{
+			"state" : "Maharashtra"
+		},
+		{
+			"country" : "Bharat"
+		},
+		{
+			"pincode" : "400111"
+		}
+	]
+}
+

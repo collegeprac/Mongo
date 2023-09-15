@@ -1,0 +1,258 @@
+db.Film.insert([{"film ID":101,title:"Saaho","Year of release":"2019",genre:["action","Adventuere"],actors:[{fname:"prabhas",lname:"india"},{fname:"jacqueline",lname:"fernadese"}],directors:[{fname:"karan",lname:"johar"},{fname:"steve",lname:"smith"}],"release details":[{"place of release":["mumbai","pune","nashik"]},{"dates":["1/1/2019","2/2/2020"]},{"rating of film":4}]}]) 
+
+db.Film.insert([{"film ID":102,title:"DDLj","Year of release":"2001",genre:["Drama","Adventuere"],actors:[{fname:"Shahrukh",lname:"Khan"},{fname:"Kajol",lname:"Devgan"}],directors:[{fname:"karan",lname:"johar"},{fname:"Yash",lname:"Raj"}],"release details":[{"place of release":["mumbai","pune","nashik"]},{"dates":["1/1/2001","2/2/2002"]},{"rating of film":4}]}])
+
+db.Film.insert([{"film ID":103,title:"Bhola","Year of release":"2023",genre:["Action","Adventuere"],actors:[{fname:"Ajay",lname:"Devgan"},{fname:"Tabbu",lname:"."}],directors:[{fname:"raja",lname:"Moli"},{fname:"Gold",lname:"Mines"}],"release details":[{"place of release":["mumbai","pune","nashik"]},{"dates":["1/1/2023","2/2/2023"]},{"rating of film":4}]}])
+
+db.Film.insert([{"film ID":104,title:"KGF","Year of release":"2023",genre:["Action","Adventuere"],actors:[{fname:"Yash",lname:"."},{fname:"Samantha",lname:"."}],directors:[{fname:"raja",lname:"Moli"},{fname:"Gold",lname:"Mines"}],"release details":[{"place of release":["mumbai","pune","nashik"]},{"dates":["1/1/2023","2/2/2023"]},{"rating of film":5}]}])
+
+db.Film.insert([{"film ID":105,title:"Vikram","Year of release":"2023",genre:["Action","Adventuere"],actors:[{fname:"Kamal",lname:"hasan"},{fname:".",lname:"."}],directors:[{fname:"raja",lname:"Moli"},{fname:"Gold",lname:"Mines"}],"release details":[{"place of release":["mumbai","pune","nashik"]},{"dates":["1/1/2023","2/2/2023"]},{"rating of film":5}]}])
+
+
+
+
+
+                                         OUTPUT
+
+> db.Film.find().pretty()
+{
+	"_id" : ObjectId("64ffff3f0572647998292012"),
+	"film ID" : 101,
+	"title" : "Saaho",
+	"Year of release" : "2019",
+	"genre" : [
+		"action",
+		"Adventuere"
+	],
+	"actors" : [
+		{
+			"fname" : "prabhas",
+			"lname" : "india"
+		},
+		{
+			"fname" : "jacqueline",
+			"lname" : "fernadese"
+		}
+	],
+	"directors" : [
+		{
+			"fname" : "karan",
+			"lname" : "johar"
+		},
+		{
+			"fname" : "steve",
+			"lname" : "smith"
+		}
+	],
+	"release details" : [
+		{
+			"place of release" : [
+				"mumbai",
+				"pune",
+				"nashik"
+			]
+		},
+		{
+			"dates" : [
+				"1/1/2019",
+				"2/2/2020"
+			]
+		},
+		{
+			"rating of film" : 4
+		}
+	]
+}
+{
+	"_id" : ObjectId("6500033a0572647998292013"),
+	"film ID" : 102,
+	"title" : "DDLj",
+	"Year of release" : "2001",
+	"genre" : [
+		"Drama",
+		"Adventuere"
+	],
+	"actors" : [
+		{
+			"fname" : "Shahrukh",
+			"lname" : "Khan"
+		},
+		{
+			"fname" : "Kajol",
+			"lname" : "Devgan"
+		}
+	],
+	"directors" : [
+		{
+			"fname" : "karan",
+			"lname" : "johar"
+		},
+		{
+			"fname" : "Yash",
+			"lname" : "Raj"
+		}
+	],
+	"release details" : [
+		{
+			"place of release" : [
+				"mumbai",
+				"pune",
+				"nashik"
+			]
+		},
+		{
+			"dates" : [
+				"1/1/2001",
+				"2/2/2002"
+			]
+		},
+		{
+			"rating of film" : 4
+		}
+	]
+}
+{
+	"_id" : ObjectId("650003ea0572647998292014"),
+	"film ID" : 103,
+	"title" : "Bhola",
+	"Year of release" : "2023",
+	"genre" : [
+		"Action",
+		"Adventuere"
+	],
+	"actors" : [
+		{
+			"fname" : "Ajay",
+			"lname" : "Devgan"
+		},
+		{
+			"fname" : "Tabbu",
+			"lname" : "."
+		}
+	],
+	"directors" : [
+		{
+			"fname" : "raja",
+			"lname" : "Moli"
+		},
+		{
+			"fname" : "Gold",
+			"lname" : "Mines"
+		}
+	],
+	"release details" : [
+		{
+			"place of release" : [
+				"mumbai",
+				"pune",
+				"nashik"
+			]
+		},
+		{
+			"dates" : [
+				"1/1/2023",
+				"2/2/2023"
+			]
+		},
+		{
+			"rating of film" : 4
+		}
+	]
+}
+{
+	"_id" : ObjectId("650004850572647998292015"),
+	"film ID" : 104,
+	"title" : "KGF",
+	"Year of release" : "2023",
+	"genre" : [
+		"Action",
+		"Adventuere"
+	],
+	"actors" : [
+		{
+			"fname" : "Yash",
+			"lname" : "."
+		},
+		{
+			"fname" : "Samantha",
+			"lname" : "."
+		}
+	],
+	"directors" : [
+		{
+			"fname" : "raja",
+			"lname" : "Moli"
+		},
+		{
+			"fname" : "Gold",
+			"lname" : "Mines"
+		}
+	],
+	"release details" : [
+		{
+			"place of release" : [
+				"mumbai",
+				"pune",
+				"nashik"
+			]
+		},
+		{
+			"dates" : [
+				"1/1/2023",
+				"2/2/2023"
+			]
+		},
+		{
+			"rating of film" : 5
+		}
+	]
+}
+{
+	"_id" : ObjectId("650004e60572647998292016"),
+	"film ID" : 105,
+	"title" : "Vikram",
+	"Year of release" : "2023",
+	"genre" : [
+		"Action",
+		"Adventuere"
+	],
+	"actors" : [
+		{
+			"fname" : "Kamal",
+			"lname" : "hasan"
+		},
+		{
+			"fname" : ".",
+			"lname" : "."
+		}
+	],
+	"directors" : [
+		{
+			"fname" : "raja",
+			"lname" : "Moli"
+		},
+		{
+			"fname" : "Gold",
+			"lname" : "Mines"
+		}
+	],
+	"release details" : [
+		{
+			"place of release" : [
+				"mumbai",
+				"pune",
+				"nashik"
+			]
+		},
+		{
+			"dates" : [
+				"1/1/2023",
+				"2/2/2023"
+			]
+		},
+		{
+			"rating of film" : 5
+		}
+	]
+}
+

@@ -1,0 +1,176 @@
+db.Actor.insert([{"actor id":"1",fname:"Aamir",lname:"Khan",address:[{street:"Marine lines"},{city:"Mumbai"},{state:"Maharashtra"},{Country:"BHARAT"},{Pincode:"400001"}],"contact details":[{Email:"jsjd@gmail.com"},{phone:"865485455"}]}])
+
+db.Actor.insert([{"actor id":"2",fname:"samantha",lname:"Ruth Prabhu",address:[{street:"MG Road"},{city:"Banglore"},{state:"Karnatka"},{Country:"BHARAT"},{Pincode:"401201"}],"contact details":[{Email:"sam@gmail.com"},{phone:"58754452187"}]}])
+
+db.Actor.insert([{"actor id":"3",fname:"Sharadha",lname:"Kapoor",address:[{street:"MarineLines"},{city:"Mumbai"},{state:"Maharashtra"},{Country:"BHARAT"},{Pincode:"40001"}],"contact details":[{Email:"ShardhaKapoor@gmail.com"},{phone:"457911235"}]}])
+
+db.Actor.insert([{"actor id":"4",fname:"Salman",lname:"Khan",address:[{street:"MG Road"},{city:"Mumbai"},{state:"Maharashtra"},{Country:"BHARAT"},{Pincode:"40001"}],"contact details":[{Email:"SAluBhai@gmail.com"},{phone:"7777775547"}]}])
+
+db.Actor.insert([{"actor id":"5",fname:"Nana",lname:"Patekar",address:[{street:"SB Road"},{city:"Pune"},{state:"Maharashtra"},{Country:"BHARAT"},{Pincode:"41101"}],"contact details":[{Email:"Nana@gmail.com"},{phone:"7451564147"}]}])
+
+
+
+
+
+                                               OUTPUT
+> use movies
+switched to db movies
+> db.getCollectionNames()
+[ "Actor", "Film" ]
+> db.Actor.find().pretty()
+{
+	"_id" : ObjectId("650008dd0572647998292017"),
+	"actor id" : "1",
+	"fname" : "Aamir",
+	"lname" : "Khan",
+	"address" : [
+		{
+			"street" : "Marine lines"
+		},
+		{
+			"city" : "Mumbai"
+		},
+		{
+			"state" : "Maharashtra"
+		},
+		{
+			"Country" : "BHARAT"
+		},
+		{
+			"Pincode" : "400001"
+		}
+	],
+	"contact details" : [
+		{
+			"Email" : "jsjd@gmail.com"
+		},
+		{
+			"phone" : "865485455"
+		}
+	]
+}
+{
+	"_id" : ObjectId("650009440572647998292018"),
+	"actor id" : "2",
+	"fname" : "samantha",
+	"lname" : "Ruth Prabhu",
+	"address" : [
+		{
+			"street" : "MG Road"
+		},
+		{
+			"city" : "Banglore"
+		},
+		{
+			"state" : "Karnatka"
+		},
+		{
+			"Country" : "BHARAT"
+		},
+		{
+			"Pincode" : "401201"
+		}
+	],
+	"contact details" : [
+		{
+			"Email" : "sam@gmail.com"
+		},
+		{
+			"phone" : "58754452187"
+		}
+	]
+}
+{
+	"_id" : ObjectId("650009d20572647998292019"),
+	"actor id" : "3",
+	"fname" : "Sharadha",
+	"lname" : "Kapoor",
+	"address" : [
+		{
+			"street" : "MarineLines"
+		},
+		{
+			"city" : "Mumbai"
+		},
+		{
+			"state" : "Maharashtra"
+		},
+		{
+			"Country" : "BHARAT"
+		},
+		{
+			"Pincode" : "40001"
+		}
+	],
+	"contact details" : [
+		{
+			"Email" : "ShardhaKapoor@gmail.com"
+		},
+		{
+			"phone" : "457911235"
+		}
+	]
+}
+{
+	"_id" : ObjectId("65000a04057264799829201a"),
+	"actor id" : "4",
+	"fname" : "Salman",
+	"lname" : "Khan",
+	"address" : [
+		{
+			"street" : "MG Road"
+		},
+		{
+			"city" : "Mumbai"
+		},
+		{
+			"state" : "Maharashtra"
+		},
+		{
+			"Country" : "BHARAT"
+		},
+		{
+			"Pincode" : "40001"
+		}
+	],
+	"contact details" : [
+		{
+			"Email" : "SAluBhai@gmail.com"
+		},
+		{
+			"phone" : "7777775547"
+		}
+	]
+}
+{
+	"_id" : ObjectId("65000a70057264799829201b"),
+	"actor id" : "5",
+	"fname" : "Nana",
+	"lname" : "Patekar",
+	"address" : [
+		{
+			"street" : "SB Road"
+		},
+		{
+			"city" : "Pune"
+		},
+		{
+			"state" : "Maharashtra"
+		},
+		{
+			"Country" : "BHARAT"
+		},
+		{
+			"Pincode" : "41101"
+		}
+	],
+	"contact details" : [
+		{
+			"Email" : "Nana@gmail.com"
+		},
+		{
+			"phone" : "7451564147"
+		}
+	]
+}
+
