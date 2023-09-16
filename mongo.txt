@@ -1,0 +1,28 @@
+ db.Employee.insert([{Eid:11,Ename:"Sandeep",salary:"15000",design:"Tester",dept:[{deptno:122,deptname:"Esolution",location:"Pune"}],projects:[{pname:"Amazon",Hrs:"100"}]}])
+
+db.Employee.insert([{Eid:12,Ename:"sahil",salary:"45000",design:"Manager",dept:[{deptno:124,deptname:"GSS",location:"Pune"}],projects:[{pname:"StockMArket",Hrs:"155"}]}])
+
+3> db.Employee.find().pretty()
+
+4> Company> db.Employee.find({Ename:/s/})
+
+5> Company> db.Employee.find({design:/Manager/})
+
+ Company> db.Employee.find({salary:{$gt:20000}})
+
+ Company> db.Employee.find({salary:{$lt:20000}})
+
+7> db.Employee.updateMany({Eid:11},{$set:{project:[{pname:"GSS",Hrs:7}]}})
+   db.Employee.updateMany({Eid:12},{$set:{project:[{pname:"GSS",Hrs:7}]}})
+
+ Company> db.Employee.updateMany({salary:{$gt:20000,$lt:50000}},{$inc:{salary:5000}})
+
+
+
+db.Employee.updateMany({salary:{$gt:1500,$lt:20000}},{$inc:{salary:1500}})
+
+db.Employee.updateMany({},{$mul:{salary:1.20}})
+
+
+
+
