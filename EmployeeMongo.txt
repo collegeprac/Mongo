@@ -1,0 +1,405 @@
+ db.Employee.insert([{Eid:1,Ename:"John Deap",salary:75000,design:"Software Engineer",dept:[{deptno:101,deptname:"Devlopment",location:"New York"}],projects:[{pname:"Project A",Hrs:"160"}]}])
+
+db.Employee.insert([{Eid:10,Ename:"Sahil Khengre",salary:80000,design:"Product Manager",dept:[{deptno:102,deptname:"Product Managment",location:"New York"}],projects:[{pname:"Project B",Hrs:"200"}]}])
+
+ db.Employee.insert([{Eid:15,Ename:"Yash Sapra",salary:200000,design:"CEO",dept:[{deptno:105,deptname:"Company",location:"Dhaka"}],projects:[{pname:"Project C",Hrs:"124"}]}])
+
+db.Employee.insert([{Eid:11,Ename:"Yash Jain",salary:50000,design:"Tester",dept:[{deptno:105,deptname:"Project A",location:"Pune"}],projects:[{pname:"Project A",Hrs:"120"}]}])
+
+ db.Employee.insert([{Eid:20,Ename:"Ganesh",salary:40000,design:"Designer",dept:[{deptno:105,deptname:"Project A",location:"Pune"}],projects:[{pname:"Project A",Hrs:"100"}]}])
+
+//Print all detail of Employees
+
+db.Employee.find().pretty()
+{
+	"_id" : ObjectId("6507e5946254cbe4ab87271a"),
+	"Eid" : 1,
+	"Ename" : "John Deap",
+	"salary" : 75000,
+	"design" : "Software Engineer",
+	"dept" : [
+		{
+			"deptno" : 101,
+			"deptname" : "Devlopment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "160"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e59c6254cbe4ab87271b"),
+	"Eid" : 10,
+	"Ename" : "Sahil Khengre",
+	"salary" : 80000,
+	"design" : "Product Manager",
+	"dept" : [
+		{
+			"deptno" : 102,
+			"deptname" : "Product Managment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project B",
+			"Hrs" : "200"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e6016254cbe4ab87271c"),
+	"Eid" : 15,
+	"Ename" : "Yash Sapra",
+	"salary" : 200000,
+	"design" : "CEO",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Company",
+			"location" : "Dhaka"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project C",
+			"Hrs" : "124"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e62f6254cbe4ab87271d"),
+	"Eid" : 11,
+	"Ename" : "Yash Jain",
+	"salary" : 50000,
+	"design" : "Tester",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Project A",
+			"location" : "Pune"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "120"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e6576254cbe4ab87271e"),
+	"Eid" : 20,
+	"Ename" : "Ganesh",
+	"salary" : 40000,
+	"design" : "Designer",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Project A",
+			"location" : "Pune"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "100"
+		}
+	]
+}
+
+//Print employees name who start with "S"
+
+db.Employee.find({Ename:{$regex:/^S/}}).pretty()
+{
+	"_id" : ObjectId("6507e59c6254cbe4ab87271b"),
+	"Eid" : 10,
+	"Ename" : "Sahil Khengre",
+	"salary" : "80000",
+	"design" : "Product Manager",
+	"dept" : [
+		{
+			"deptno" : 102,
+			"deptname" : "Product Managment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project B",
+			"Hrs" : "200"
+		}
+	]
+}
+
+
+//print Employee who is "Product Manager"
+
+db.Employee.find({"design":"Product Manager"}).pretty()
+{
+	"_id" : ObjectId("6507e59c6254cbe4ab87271b"),
+	"Eid" : 10,
+	"Ename" : "Sahil Khengre",
+	"salary" : "80000",
+	"design" : "Product Manager",
+	"dept" : [
+		{
+			"deptno" : 102,
+			"deptname" : "Product Managment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project B",
+			"Hrs" : "200"
+		}
+	]
+}
+
+
+//display all employee with salary greter than 50000 and less than 80000
+
+db.Employee.find({"salary":{$gt:50000,$lt:80000}}).pretty()
+{
+	"_id" : ObjectId("6507e5946254cbe4ab87271a"),
+	"Eid" : 1,
+	"Ename" : "John Deap",
+	"salary" : 75000,
+	"design" : "Software Engineer",
+	"dept" : [
+		{
+			"deptno" : 101,
+			"deptname" : "Devlopment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "160"
+		}
+	]
+}
+
+
+//Update the number of hours to 7 for nmae "Project B"
+
+db.Employee.updateOne({"projects.pname":"Project B"},{$set:{"projects.Hrs":7}})
+
+
+//Add bonus 5000 of employees whose salary in range between 50000 and 150000
+> db.Employee.updateMany({"salary":{$gt:50000,$lt:150000}},{$inc:{"salary":5000}})
+
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+> db.Employee.find().pretty()
+{
+	"_id" : ObjectId("6507e5946254cbe4ab87271a"),
+	"Eid" : 1,
+	"Ename" : "John Deap",
+	"salary" : 85000,
+	"design" : "Software Engineer",
+	"dept" : [
+		{
+			"deptno" : 101,
+			"deptname" : "Devlopment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "160"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e59c6254cbe4ab87271b"),
+	"Eid" : 10,
+	"Ename" : "Sahil Khengre",
+	"salary" : 90000,
+	"design" : "Product Manager",
+	"dept" : [
+		{
+			"deptno" : 102,
+			"deptname" : "Product Managment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project B",
+			"Hrs" : "200"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e6016254cbe4ab87271c"),
+	"Eid" : 15,
+	"Ename" : "Yash Sapra",
+	"salary" : 40000,
+	"design" : "CEO",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Company",
+			"location" : "Dhaka"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project C",
+			"Hrs" : "124"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e62f6254cbe4ab87271d"),
+	"Eid" : 11,
+	"Ename" : "Yash Jain",
+	"salary" : 50000,
+	"design" : "Tester",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Project A",
+			"location" : "Pune"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "120"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e6576254cbe4ab87271e"),
+	"Eid" : 20,
+	"Ename" : "Ganesh",
+	"salary" : 40000,
+	"design" : "Designer",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Project A",
+			"location" : "Pune"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "100"
+		}
+	]
+}
+
+//Increase salary by 20% of employee 
+> db.Employee.updateMany({"dept.deptname":"Project A"},{$mul:{"salary":1.20}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+> db.Employee.find().pretty()
+{
+	"_id" : ObjectId("6507e5946254cbe4ab87271a"),
+	"Eid" : 1,
+	"Ename" : "John Deap",
+	"salary" : 90000,
+	"design" : "Software Engineer",
+	"dept" : [
+		{
+			"deptno" : 101,
+			"deptname" : "Devlopment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "160"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e59c6254cbe4ab87271b"),
+	"Eid" : 10,
+	"Ename" : "Sahil Khengre",
+	"salary" : 95000,
+	"design" : "Product Manager",
+	"dept" : [
+		{
+			"deptno" : 102,
+			"deptname" : "Product Managment",
+			"location" : "New York"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project B",
+			"Hrs" : "200"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e6016254cbe4ab87271c"),
+	"Eid" : 15,
+	"Ename" : "Yash Sapra",
+	"salary" : 40000,
+	"design" : "CEO",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Company",
+			"location" : "Dhaka"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project C",
+			"Hrs" : "124"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e62f6254cbe4ab87271d"),
+	"Eid" : 11,
+	"Ename" : "Yash Jain",
+	"salary" : 60000,
+	"design" : "Tester",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Project A",
+			"location" : "Pune"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "120"
+		}
+	]
+}
+{
+	"_id" : ObjectId("6507e6576254cbe4ab87271e"),
+	"Eid" : 20,
+	"Ename" : "Ganesh",
+	"salary" : 48000,
+	"design" : "Designer",
+	"dept" : [
+		{
+			"deptno" : 105,
+			"deptname" : "Project A",
+			"location" : "Pune"
+		}
+	],
+	"projects" : [
+		{
+			"pname" : "Project A",
+			"Hrs" : "100"
+		}
+	]
+}
+
